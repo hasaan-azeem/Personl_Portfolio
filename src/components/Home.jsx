@@ -50,17 +50,17 @@ const Home = () => {
         >
           <div
             ref={tiltRef}
-            className=" relative text-center sm:text-left py-5"
+            className=" relative text-left py-5"
           >
             <h1 className="text-3xl sm:text-[3.5vw] uppercase text-black font-[apna] font-extrabold leading-[1vw] sm:leading-[3vw]">
               I am <span className="text-[#08aaaa]">DARK MODE</span>
               <span className="font-[apna3]">™</span>
             </h1>
-            <h1 className="text-[4vw] text-black uppercase font-[apna] font-extrabold leading-[6vw] tracking-wide">
+            <h1 className="text-3xl sm:text-[4vw] text-black uppercase font-[apna] font-extrabold leading-[6vw] tracking-wide">
               Website Developer
             </h1>
 
-            <h1 className="text-[#08aaaa] text-[3.5vw] uppercase font-[apna] font-extrabold leading-[3vw]">
+            <h1 className="text-[#08aaaa] text-[3vw] sm:text-[3.5vw] uppercase font-[apna] font-extrabold leading-[3vw]">
               To Hire
             </h1>
           </div>
