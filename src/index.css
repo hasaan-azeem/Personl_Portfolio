@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: apna;
+    src: url(./assets/fonts/font.woff2);
+}
+@font-face {
+    font-family: apna2;
+    src: url(./assets/fonts/font1.woff2);
+}
+@font-face {
+    font-family: apna3;
+    src: url(./assets/fonts/font2.woff2);
+}
+
+.bg-hero {
+  background-image: url('/src/assets/bg.png');
+}
+
+
+
+#main{
+    perspective: 1000px;
+    position: relative;
+}
+
+#tilt{
+    width: fit-content;
+
+}
