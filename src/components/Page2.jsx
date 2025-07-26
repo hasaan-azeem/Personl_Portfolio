@@ -65,11 +65,11 @@ const Marquee = () => {
     </div>
 
     <div id="section2" className="h-full flex flex-col overflow-hidden items-center mt-10 ">
-    <span className="rotateText font-[apna] font-[1000] text-[20vw] uppercase tracking-wide leading-none mb-5 ">Code</span>
-    <span className="rotateText font-[apna] font-[1000] text-[20vw] uppercase tracking-wide leading-none mb-5 ">Design</span>
-    <span className="rotateText font-[apna] font-[1000] text-[20vw] uppercase tracking-wide leading-none mb-5 ">Deploy</span>
-    <span className="rotateText font-[apna] font-[1000] text-[20vw] uppercase tracking-wide leading-none mb-5 ">Optimize</span>
-    <span className="rotateText font-[apna] font-[1000] text-[20vw] uppercase tracking-wide leading-none mb-5">Scale</span>
+    <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">Code</span>
+    <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">Design</span>
+    <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">Deploy</span>
+    <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">Optimize</span>
+    <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5">Scale</span>
     </div>
  
    </div>
