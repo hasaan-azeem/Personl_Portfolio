@@ -99,10 +99,10 @@ const Home = () => {
     >
       {/* Desktop Hero Container with Background Image */}
       <div 
-        className="bg-hero-desktop relative w-full h-full p-3 xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 rounded-2xl sm:rounded-3xl shadow-lg bg-cover bg-center bg-no-repeat"      >
+        className="bg-hero-desktop w-full h-full xs:p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg bg-cover bg-center bg-no-repeat"      >
         
         {/* Desktop Text Content - Left Side */}
-        <div className="relative flex items-center justify-start h-full z-10">
+        <div className="flex items-center justify-start h-full w-full z-10 ">
           <div ref={tiltRef} className="relative text-left py-2 xs:py-3 sm:py-5 px-2 xs:px-3 sm:px-4">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl uppercase text-black font-[apna] font-extrabold leading-tight">
               I am <span className="text-[#08aaaa]">DARK MODE</span>
@@ -120,7 +120,7 @@ const Home = () => {
         </div>
 
         {/* Footer Text */}
-        <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-10 left-4 xs:left-6 sm:left-8 md:left-12 lg:left-16 z-10">
+        <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-10 left-4 xs:left-6 sm:left-8 md:left-12 lg:left-22 z-10">
           <h2 className="text-black font-[apna3] tracking-wider text-xs xs:text-sm sm:text-base md:text-lg uppercase">
             Full stack developer
           </h2>
