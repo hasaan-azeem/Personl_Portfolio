@@ -13,18 +13,30 @@
     src: url(./assets/fonts/font2.woff2);
 }
 
-.bg-hero {
-  background-image: url('/src/assets/bg.png');
+.bg-hero-desktop{
+  background-image: url('/src/assets/desktopBG.png');
 }
 
+.bg-hero-mobile {
+  background-image: url('/src/assets/mobile.png');
+}
 
 
 #main{
     perspective: 1000px;
     position: relative;
 }
+#section2{
+    perspective: 2000px;
+    position: relative;
+}
 
 #tilt{
     width: fit-content;
+
+}
+
+.rotateText{
+    transform-origin: 100% 70%;
 
 }

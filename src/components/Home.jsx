@@ -41,18 +41,14 @@ const Home = () => {
       className="relative h-screen w-full bg-white p-3 sm:p-5 "
     >
       {/* Hero Bg Image */}
-      <div className="w-full h-full bg-hero p-4 sm:p-8 rounded-3xl shadow-lg ">
-        
+      <div className="bg-hero-desktop w-full h-full p-4 sm:p-8 lg:p-20 rounded-3xl shadow-lg bg-cover bg-center bg-no-repeat">
         {/* Tilt Text */}
         <div
           id="main"
           className=" relative flex items-center justify-start h-full gap-40 sm:flex-row -mt-10 sm:mt-0 p-4"
         >
-          <div
-            ref={tiltRef}
-            className=" relative text-left py-5"
-          >
-            <h1 className="text-3xl sm:text-[3.5vw] uppercase text-black font-[apna] font-extrabold leading-[4vw] sm:leading-[1vw] sm:leading-[3vw]">
+          <div ref={tiltRef} className=" relative text-left py-5">
+            <h1 className="text-3xl sm:text-[3.5vw] uppercase text-black font-[apna] font-extrabold leading-[4vw] sm:leading-[3vw]">
               I am <span className="text-[#08aaaa]">DARK MODE</span>
               <span className="font-[apna3]">™</span>
             </h1>
@@ -67,13 +63,12 @@ const Home = () => {
         </div>
 
         {/* Footer Text */}
-        <div className=" relative bottom-10 left-0 px-5 py-3 ">
+        <div className=" relative bottom-1 -left-14 sm:-left-4 p-10">
           <h2 className="text-black font-[apna3] tracking-wider text-sm uppercase">
             Full stack developer
           </h2>
         </div>
       </div>
-      
     </div>
   );
 };
