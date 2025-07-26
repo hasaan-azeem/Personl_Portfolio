@@ -99,11 +99,7 @@ const Home = () => {
     >
       {/* Desktop Hero Container with Background Image */}
       <div 
-        className="relative w-full h-full p-3 xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 rounded-2xl sm:rounded-3xl shadow-lg bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/src/assets/desktop.png')`
-        }}
-      >
+        className="bg-hero-desktop relative w-full h-full p-3 xs:p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 rounded-2xl sm:rounded-3xl shadow-lg bg-cover bg-center bg-no-repeat"      >
         
         {/* Desktop Text Content - Left Side */}
         <div className="relative flex items-center justify-start h-full z-10">

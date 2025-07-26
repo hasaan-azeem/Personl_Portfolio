@@ -14,12 +14,9 @@
 }
 
 .bg-hero-desktop{
-  background-image: url('');
+  background-image: url('/src/assets/desktop.png');
 }
 
-.bg-hero-mobile {
-  background-image: url('/src/assets/mobile.png');
-}
 
 
 #main{
