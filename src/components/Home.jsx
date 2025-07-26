@@ -76,7 +76,7 @@ const Home = () => {
             {/* Image Section */}
             <div className="relative flex-1 flex justify-center items-center">
               <div className="">
-                <img src="src\assets\profile.png" alt="" />
+                <img src="\assets\profile.png" alt="" />
               </div>
             </div>
 
