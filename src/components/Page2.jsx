@@ -20,20 +20,46 @@ const Marquee = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  useGSAP(function () {
-    gsap.from(".rotateText", {
-      transform: "rotateX(-80deg)",
-      opacity: 0,
-      duration: 1,
-      stagger: 1,
-      scrollTrigger: {
-        trigger: ".rotateText",
-        start: "top 60%",
-        end: "top -100%",
-        scrub: 2,
-      },
-    });
+useGSAP(function () {
+  ScrollTrigger.matchMedia({
+
+    // Desktop screens
+    "(min-width: 768px)": function () {
+      gsap.from(".rotateText", {
+        transform: "rotateX(-80deg)",
+        opacity: 0,
+        duration: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".rotateText",
+          start: "top 90%",
+          end: "top -250%",
+          scrub: 2,
+        },
+      });
+    },
+
+    // Mobile screens
+   "(max-width: 767px)": function () {
+  gsap.from(".rotateText", {
+    transform: "rotateX(-80deg)",
+    opacity: 0,
+    duration: 1,        // reduce duration to make each element animate faster
+    stagger: 0.3,         // shorter delay between items
+    scrollTrigger: {
+      trigger: "#section2",
+      start: "top 80%",   // slightly later start
+      end: "bottom 40%",  // reduce distance between start and end
+      scrub: 2,
+    },
   });
+}
+
+
+
+  });
+});
+
 
   return (
     <div className="flex flex-col justify-center">
@@ -61,30 +87,33 @@ const Marquee = () => {
 
       <div
         id="section2"
-        className="h-full flex flex-col overflow-hidden items-center mt-10 "
+        className="h-full w-full flex flex-col overflow-hidden  items-center mt-4 sm:mt-10 "
       >
-        <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">
+        <span className="rotateText font-[apna2]  text-black text-[60vw] sm:text-[30vw] uppercase tracking-wide sm:tracking-widest leading-none ">
           Code
         </span>
-        <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide  sm:tracking-widest">
           Design
         </span>
-        <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide sm:tracking-widest">
           Deploy
         </span>
-        <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5 ">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide sm:tracking-widest">
           Optimize
         </span>
-        <span className="rotateText font-[apna] font-[1000] text-black text-[20vw] uppercase tracking-wide leading-none mb-5">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide sm:tracking-widest">
           Scale
         </span>
+        
       </div>
 
-      <span className="rotateText w-[50vw] h-1 bg-gray-700 mx-auto mt-10"></span>
+      <span className="rotateText w-[50vw] h-1 bg-gray-700 mx-auto mt-0 sm:mt-10"></span>
 
-    <span className="font-[apna3] justify-center text-center mt-8 text-lg bg-[#dadada]">Consistency beats talent when talent doesn’t show up.</span>
-    <div className="flex justify-center items-center mt-4">
-      <h1 className="font-[apna] text-[5vw] font-bold">Skills</h1>
+    <span className="font-[apna3] justify-center text-center mt-4 sm:mt-8 py-3 text-md sm:text-lg bg-[#dadada]">Consistency beats talent when talent doesn’t show up.</span>
+
+    <div className="flex justify-center items-center pt-4 bg-red-500">
+
+      <h1 className="font-[apna] text-2xl sm:text-[5vw] font-bold ">Skills</h1>
 
     </div>
     </div>
@@ -92,3 +121,4 @@ const Marquee = () => {
 };
 
 export default Marquee;
+

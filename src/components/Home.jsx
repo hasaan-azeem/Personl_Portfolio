@@ -56,7 +56,7 @@ const Home = () => {
           <div className="flex flex-col items-center justify-center h-[100vh] p-4 xs:p-6 sm:p-8 md:p-12">
             
             {/* Text Section */}
-            <div className="h-full w-full flex flex-col justify-center items-center mt-35">
+            <div className="h-full w-full flex flex-col justify-center items-center mt-30">
               <div ref={tiltRef} className="text-center">
                 <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl uppercase text-black font-[apna] font-extrabold leading-tight">
                   I am <span className="text-[#08aaaa]">DARK MODE</span>
@@ -74,10 +74,9 @@ const Home = () => {
             </div>
 
             {/* Image Section */}
-            <div className="relative flex-1 flex justify-center items-center">
-              <div className="">
+            <div className="relative bottom-2 flex justify-center items-end w-full h-full">
+              
                 <img src="\assets\profile.png" alt="" />
-              </div>
             </div>
 
           </div>
