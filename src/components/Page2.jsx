@@ -89,19 +89,19 @@ useGSAP(function () {
         id="section2"
         className="h-full w-full flex flex-col overflow-hidden  items-center mt-4 sm:mt-10 "
       >
-        <span className="rotateText font-[apna2]  text-black text-[60vw] sm:text-[30vw] uppercase tracking-wide sm:tracking-widest leading-none ">
+        <span className="rotateText font-[apna2] text-black text-[60vw] sm:text-[30vw] uppercase tracking-wide sm:tracking-widest leading-none -mb-10">
           Code
         </span>
-        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide  sm:tracking-widest">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide  sm:tracking-widest -mb-10">
           Design
         </span>
-        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide sm:tracking-widest">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest -mb-10">
           Deploy
         </span>
-        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide sm:tracking-widest">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest -mb-10">
           Optimize
         </span>
-        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase  leading-none tracking-wide sm:tracking-widest">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest">
           Scale
         </span>
         
