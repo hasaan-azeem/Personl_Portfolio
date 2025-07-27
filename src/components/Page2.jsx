@@ -32,7 +32,7 @@ useGSAP(function () {
         stagger: 0.5,
         scrollTrigger: {
           trigger: ".rotateText",
-          start: "top 90%",
+          start: "top 100%",
           end: "top -250%",
           scrub: 2,
         },
