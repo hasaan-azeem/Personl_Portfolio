@@ -44,7 +44,7 @@ const Home = () => {
   if (isMobile) {
     // Mobile Layout - Gray background with flex-col
     return (
-      <div
+      <div id="section-main"
         onMouseMove={(e) => {
           mouseMoving(e);
         }}
@@ -89,7 +89,7 @@ const Home = () => {
 
   // Desktop Layout - Background image with overlay
   return (
-    <div
+    <div id="section-main"
       onMouseMove={(e) => {
         mouseMoving(e);
       }}

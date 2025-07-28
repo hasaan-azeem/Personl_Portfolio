@@ -273,21 +273,22 @@ const Skills = () => {
         gsap.to(el, { scale: 1, y: 0, duration: 0.3, ease: "power2.out" });
       });
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div
+    <div id="section-skills"
       ref={sectionRef}
-      className="flex flex-col justify-center items-center py-10 min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"
+      className="flex flex-col justify-center items-center lg:m-5 rounded-3xl py-6 min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"
     >
       <h1
         ref={titleRef}
-        className="font-[apna] text-6xl sm:text-[5vw] font-bold text-black mb-10"
+        className="font-[apna3] text-6xl sm:text-[5vw] font-bold text-black mb-10"
       >
         Skills
       </h1>
 
-      <div className="w-full max-w-6xl px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-full max-w-6xl px-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skills.map((skill, index) => (
           <div
             key={skill.name}
