@@ -110,12 +110,6 @@ useGSAP(function () {
       <span className="rotateText w-[50vw] h-1 bg-gray-700 mx-auto mt-0 sm:mt-10"></span>
 
     <span className="font-[apna3] justify-center text-center mt-4 sm:mt-8 py-3 text-md sm:text-lg bg-[#dadada]">Consistency beats talent when talent doesn’t show up.</span>
-
-    <div className="flex justify-center items-center pt-4 bg-red-500">
-
-      <h1 className="font-[apna] text-2xl sm:text-[5vw] font-bold ">Skills</h1>
-
-    </div>
     </div>
   );
 };

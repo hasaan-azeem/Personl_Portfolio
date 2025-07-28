@@ -5,6 +5,7 @@ import Page2 from "./components/Page2";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Skills from "./components/Skills";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,6 +38,7 @@ const App = () => {
       <NavBar />
       <Home />
       <Page2 />
+      <Skills />
     </div>
   );
 };

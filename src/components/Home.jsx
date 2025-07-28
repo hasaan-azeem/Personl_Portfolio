@@ -51,37 +51,36 @@ const Home = () => {
         className="relative h-screen w-full bg-white p-2 xs:p-3 sm:p-4"
       >
         <div className="w-full h-full rounded-2xl sm:rounded-3xl shadow-lg bg-[#dadada]">
+
           
           {/* Mobile Content - Flex Column */}
           <div className="flex flex-col items-center justify-center h-[100vh] p-4 xs:p-6 sm:p-8 md:p-12">
             
             {/* Text Section */}
-            <div className="h-full w-full flex flex-col justify-center items-center mt-30">
+            <div className="h-full w-full flex flex-col justify-center items-center mt-45">
               <div ref={tiltRef} className="text-center">
                 <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl uppercase text-black font-[apna] font-extrabold leading-tight">
                   I am <span className="text-[#08aaaa]">DARK MODE</span>
                   <span className="font-[apna3]">™</span>
                 </h1>
                              
-                <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-black uppercase font-[apna] font-extrabold leading-tight tracking-wide mt-2 xs:mt-3 sm:mt-4">
+                <h1 className="text-4xl xs:text-4xl sm:text-5xl md:text-6xl text-black uppercase font-[apna] font-extrabold leading-tight tracking-wide mt-2 xs:mt-3 sm:mt-4">
                   Website Developer
                 </h1>
 
-                <h1 className="text-[#08aaaa] text-2xl xs:text-3xl sm:text-4xl md:text-5xl uppercase font-[apna] font-extrabold leading-tight mt-2 xs:mt-3 sm:mt-4">
+                <h1 className="text-[#08aaaa] text-3xl xs:text-3xl sm:text-4xl md:text-5xl uppercase font-[apna] font-extrabold leading-tight mt-2 xs:mt-3 sm:mt-4">
                   To Hire
                 </h1>
               </div>
             </div>
 
             {/* Image Section */}
-            <div className="relative bottom-2 flex justify-center items-end w-full h-full">
+            <div className="relative bottom-2 -mb-2 flex justify-center items-end w-full h-full">
               
                 <img src="\assets\profile.png" alt="" />
             </div>
 
           </div>
-
-          {/* Footer Text */}
           
         </div>
       </div>
@@ -102,7 +101,7 @@ const Home = () => {
         
         {/* Desktop Text Content - Left Side */}
         <div className="flex items-center justify-start h-full w-full z-10 ">
-          <div ref={tiltRef} className="relative text-left py-2 xs:py-3 sm:py-5 px-2 xs:px-3 sm:px-4">
+          <div ref={tiltRef} className="relative text-left py-2 xs:py-3 sm:py-5 px-2 xs:px-3 ">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl uppercase text-black font-[apna] font-extrabold leading-tight">
               I am <span className="text-[#08aaaa]">DARK MODE</span>
               <span className="font-[apna3]">™</span>
@@ -119,7 +118,7 @@ const Home = () => {
         </div>
 
         {/* Footer Text */}
-        <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-10 left-4 xs:left-6 sm:left-8 md:left-12 lg:left-22 z-10">
+        <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-10 left-4 xs:left-6 sm:left-8 md:left-12 lg:left-19 z-10">
           <h2 className="text-black font-[apna3] tracking-wider text-xs xs:text-sm sm:text-base md:text-lg uppercase">
             Full stack developer
           </h2>
