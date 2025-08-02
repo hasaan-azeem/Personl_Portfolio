@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+      xs: "480px", // or whatever value you want
+    },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },

@@ -28,9 +28,8 @@
     position: relative;
 }
 
-#tilt{
+#tiltDiv{
     width: fit-content;
-
 }
 
 .rotateText{

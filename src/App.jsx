@@ -3,9 +3,12 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Page2 from "./components/Page2";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,6 +51,9 @@ const App = () => {
       <Home ref={sectionRefs.home} />
       <Page2 sectionRefs={sectionRefs} />
       <Skills ref={sectionRefs.skills} />
+      <Projects ref={sectionRefs.Projects} />
+      <Contact ref={sectionRefs.Contact} />
+      <Footer ref={sectionRefs.Footer}/>
     </div>
   );
 };

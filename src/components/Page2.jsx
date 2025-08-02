@@ -55,8 +55,6 @@ useGSAP(function () {
   });
 }
 
-
-
   });
 });
 

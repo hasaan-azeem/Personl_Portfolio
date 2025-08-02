@@ -19,7 +19,7 @@ const NavBar = () => {
               height="100"
               viewBox="0 0 32 32"
               fill="#08aaaa"
-              className="w-8 h-8"
+              className="w-8 h-8 z-10 sm:fill-[#08aaaa] fill-white"
             >
               <path d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"></path>
             </svg>
@@ -57,9 +57,10 @@ const NavBar = () => {
               title="Home"
               className="cursor-pointer"
               onClick={() => {
-    const el = document.getElementById("section-main");
-    if (el) el.scrollIntoView({ behavior: "smooth" , block: "start" });
-  }}
+                const el = document.getElementById("section-main");
+                if (el)
+                  el.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -123,11 +124,14 @@ const NavBar = () => {
             </button>
 
             {/* skills */}
-            <button title="Skills" className="cursor-pointer"
-            onClick={() => {
-    const el = document.getElementById("section-skills");
-    if (el) el.scrollIntoView({ behavior: "smooth"});
-  }}>
+            <button
+              title="Skills"
+              className="cursor-pointer"
+              onClick={() => {
+                const el = document.getElementById("section-skills");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -143,7 +147,14 @@ const NavBar = () => {
             </button>
 
             {/* Projects */}
-            <button title="Projects" className="cursor-pointer">
+            <button
+              title="Projects"
+              className="cursor-pointer"
+              onClick={() => {
+                const el = document.getElementById("projects");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -159,7 +170,14 @@ const NavBar = () => {
             </button>
 
             {/* Contact */}
-            <button title="Contact" className="cursor-pointer">
+            <button
+              title="Contact"
+              className="cursor-pointer"
+              onClick={() => {
+                const el = document.getElementById("contact");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

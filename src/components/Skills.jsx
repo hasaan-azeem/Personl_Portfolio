@@ -279,7 +279,7 @@ const Skills = () => {
   return (
     <div id="section-skills"
       ref={sectionRef}
-      className="flex flex-col justify-center items-center lg:m-5 rounded-3xl py-6 min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"
+      className="flex flex-col justify-center items-center  rounded-3xl py-6 min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"
     >
       <h1
         ref={titleRef}
@@ -338,6 +338,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
+      
     </div>
   );
 };
