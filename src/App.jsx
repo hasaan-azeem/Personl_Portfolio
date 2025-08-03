@@ -9,6 +9,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Certification from "./components/Certification";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +53,7 @@ const App = () => {
       <Page2 sectionRefs={sectionRefs} />
       <Skills ref={sectionRefs.skills} />
       <Projects ref={sectionRefs.Projects} />
+      <Certification ref={sectionRefs.Certification} />
       <Contact ref={sectionRefs.Contact} />
       <Footer ref={sectionRefs.Footer}/>
     </div>

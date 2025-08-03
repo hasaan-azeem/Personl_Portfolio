@@ -33,7 +33,7 @@ const Projects = () => {
 
   return (
     <>
-    <div>
+    <div className="mt-2 ">
       <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
         From Sketch to Screen.
       </h2>
@@ -44,7 +44,7 @@ const Projects = () => {
         id="projects"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="-mt-7 text-6xl sm:text-4xl font-[apna] font-bold text-center text-gray-800 dark:text-white mb-12">
+          <h2 className="-mt-7 text-6xl sm:text-[5vw] font-[apna] font-bold text-center text-gray-800 dark:text-white mb-12">
             Projects
           </h2>
 
