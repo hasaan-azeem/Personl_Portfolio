@@ -4,22 +4,10 @@ import React, { useRef, useState } from "react";
 
 const Home = () => {
   const tiltRef = useRef(null);
-  // const [isMobile, setIsMobile] = useState(false);
+
 
   const [xVal, setXVal] = useState(0);
   const [yVal, setYVal] = useState(0);
-
-  // Check screen size
-  // useEffect(() => {
-  //   const checkScreenSize = () => {
-  //     setIsMobile(window.innerWidth < 1024); // 1024px is Tailwind's lg breakpoint
-  //   };
-
-  //   checkScreenSize();
-  //   window.addEventListener("resize", checkScreenSize);
-
-  //   return () => window.removeEventListener("resize", checkScreenSize);
-  // }, []);
 
   const mouseMoving = (e) => {
 
@@ -37,7 +25,6 @@ const Home = () => {
   },[xVal, yVal]);
 
 
-  // Desktop Layout - Background image with overlay
   return (
     <div
       id="section-main"
