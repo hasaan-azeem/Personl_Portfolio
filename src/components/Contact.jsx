@@ -37,12 +37,18 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <div className=" ">
+        <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
+          Ready to Build Something Great?
+        </h2>
+      </div>
     <section
       id="contact"
-      className="px-4 sm:px-10 py-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl"
+      className="w-full px-4sm:px-6 lg:px-8 py-16 bg-gray-50 dark:bg-gray-900 rounded-3xl"
     >
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <h2 className="text-3xl font-[apna] sm:text-4xl font-bold text-gray-800 dark:text-white">
+        <h2 className="text-3xl font-[apna] sm:text-4xl font-bold text-gray-800  dark:text-white">
           Let's Connect
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mt-2">
@@ -111,6 +117,7 @@ const Contact = () => {
         )}
       </form>
     </section>
+    </>
   );
 };
 

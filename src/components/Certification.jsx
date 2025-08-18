@@ -54,9 +54,15 @@ const Certification = () => {
   }, []);
 
   return (
+    <>
+    <div className=" ">
+        <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
+          Where creativity meets code.
+        </h2>
+      </div>
     <section
       id="certifications"
-      className="w-full px-4 -mt-8 sm:px-6 lg:px-8 py-16 bg-gray-50 dark:bg-gray-900"
+      className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-3xl dark:bg-gray-900"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-6xl sm:text-[5vw] font-[apna] font-bold text-center text-black dark:text-white mb-2">
@@ -98,6 +104,7 @@ const Certification = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

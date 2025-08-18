@@ -29,22 +29,19 @@ const projects = [
 ];
 
 const Projects = () => {
-  
-
   return (
     <>
-    <div className="mt-2 ">
-      <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
-        From Sketch to Screen.
-      </h2>
+      <div className=" ">
+        <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
+          From Sketch to Screen.
+        </h2>
       </div>
       <section
-        
         className="px-2 sm:px-10 py-16  dark:bg-gray-900  rounded-3xl"
         id="projects"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="-mt-7 text-6xl sm:text-[5vw] font-[apna] font-bold text-black text-center mb-12">
+          <h2 className="-mt-7 text-6xl sm:text-[5vw] font-[apna] font-bold text-black dark:text-white text-center mb-12">
             Projects
           </h2>
 

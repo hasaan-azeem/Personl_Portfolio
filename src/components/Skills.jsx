@@ -279,11 +279,11 @@ const Skills = () => {
   return (
     <div id="section-skills"
       ref={sectionRef}
-      className="flex flex-col justify-center items-center  rounded-3xl py-6 min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"
+      className="flex flex-col justify-center items-center  rounded-3xl py-6 min-h-screen  dark:bg-gray-800"
     >
       <h1
         ref={titleRef}
-        className="font-[apna3] text-6xl sm:text-[5vw] font-bold text-black mb-10"
+        className="font-[apna3] text-6xl sm:text-[5vw] font-bold text-black dark:text-white mb-10"
       >
         Skills
       </h1>
@@ -325,7 +325,7 @@ const Skills = () => {
       </div>
 
       <div className="mt-16 text-center">
-        <p className="text-gray-600 text-lg mb-4 font-medium">
+        <p className="text-gray-600 dark:text-gray-200 text-lg mb-4 font-medium">
           Always learning, always growing
         </p>
         <div className="flex justify-center space-x-2">

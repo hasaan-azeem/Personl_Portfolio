@@ -60,7 +60,7 @@ const Home = () => {
             <span className="font-[apna3]">™</span>
           </h1>
 
-          <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-black uppercase font-[apna] font-extrabold leading-tight tracking-tight sm:tracking-wide mt-2">
+          <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-black uppercase font-[apna3] font-extrabold leading-tight tracking-tight sm:tracking-wide mt-2">
             Website Developer
           </h1>
 
