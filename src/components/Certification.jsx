@@ -65,7 +65,7 @@ const Certification = () => {
       className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-3xl dark:bg-gray-900"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-6xl sm:text-[5vw] font-[apna] font-bold text-center text-black dark:text-white mb-2">
+        <h2 className="text-5xl sm:text-[4vw] font-[apna] font-bold text-center text-black dark:text-white mb-2">
           Certifications
         </h2>
 
