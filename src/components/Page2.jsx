@@ -105,9 +105,7 @@ useGSAP(function () {
         
       </div>
 
-      <span className="rotateText w-[50vw] h-1 bg-gray-700 mx-auto mt-0 sm:mt-10"></span>
-
-    <span className="font-[apna3] justify-center text-center mt-4 sm:mt-8 py-3 text-md sm:text-lg bg-[#dadada]">Consistency beats talent when talent doesn’t show up.</span>
+      <span className="rotateText w-70 sm:w-[50vw] h-1 bg-gray-700 mx-auto mt-0 sm:mt-10"></span>
     </div>
   );
 };

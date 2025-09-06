@@ -1,12 +1,12 @@
-import React, {  useRef } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import React, { useRef } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
-    const footerRef = useRef();
+  const footerRef = useRef();
   return (
     <footer
       ref={footerRef}
-      className="bg-[#DADADA] dark:bg-gray-900 text-gray-600 dark:text-gray-300 py-6 px-4 border-t border-gray-200 dark:border-gray-700"
+      className="text-gray-600  py-6 px-4 border-t border-gray-200 "
     >
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-sm text-center sm:text-left">
@@ -31,7 +31,9 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:hasaanazeem07@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=hasaanazeem07@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-[#08aaaa] transition"
           >
             <FaEnvelope />
@@ -39,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

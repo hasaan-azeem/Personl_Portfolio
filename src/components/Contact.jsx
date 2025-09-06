@@ -38,20 +38,15 @@ const Contact = () => {
 
   return (
     <>
-    <div className=" ">
-        <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
-          Ready to Build Something Great?
-        </h2>
-      </div>
     <section
       id="contact"
-      className="w-full px-4sm:px-6 lg:px-8 py-16 bg-gray-50 dark:bg-gray-900 rounded-3xl"
+      className="w-full px-2 sm:px-6 lg:px-8 py-12 bg-gray-50  rounded-3xl"
     >
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <h2 className="text-3xl font-[apna] sm:text-4xl font-bold text-gray-800  dark:text-white">
-          Let's Connect
+        <h2 className="text-3xl sm:text-5xl font-bold text-center">
+         Get in Touch
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 mt-2">
+        <p className="text-gray-600 text-sm sm:text-xl mt-2">
           Drop a message and I’ll get back to you as soon as possible.
         </p>
       </div>
@@ -59,42 +54,42 @@ const Contact = () => {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="max-w-2xl mx-auto bg-gray-100 dark:bg-gray-800 p-8 rounded-2xl shadow-md"
+        className="max-w-5xl mx-auto bg-gray-100  p-8 rounded-2xl shadow-md"
       >
         <div className="mb-5">
-          <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+          <label className="block mb-2 text-sm font-medium text-gray-700 ">
             Name
           </label>
           <input
             type="text"
             name="name"
             required
-            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 rounded-lg bg-white  border border-gray-300  text-gray-800  focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Your Name"
           />
         </div>
         <div className="mb-5">
-          <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+          <label className="block mb-2 text-sm font-medium text-gray-700 ">
             Email
           </label>
           <input
             type="email"
             name="email"
             required
-            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="you@example.com"
+            className="w-full px-4 py-3 rounded-lg bg-white  border border-gray-300  text-gray-800  focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="you@gmail.com"
           />
         </div>
 
         <div className="mb-5">
-          <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+          <label className="block mb-2 text-sm font-medium text-gray-700 ">
             Message
           </label>
           <textarea
             name="message"
             rows="5"
             required
-            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 rounded-lg bg-white  border border-gray-300  text-gray-800  focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Write your message here..."
           ></textarea>
         </div>

@@ -54,57 +54,66 @@ const Certification = () => {
   }, []);
 
   return (
-    <>
-    <div className=" ">
-        <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
-          Where creativity meets code.
-        </h2>
-      </div>
     <section
       id="certifications"
-      className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-3xl dark:bg-gray-900"
+      className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-gray-50"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl sm:text-[4vw] font-[apna] font-bold text-center text-black dark:text-white mb-2">
+        <h2 className="text-3xl sm:text-5xl font-bold text-center">
           Certifications
         </h2>
 
         {/* Rotating tagline */}
-        <p className="text-center text-gray-600 dark:text-gray-400 text-sm sm:text-base mb-10 min-h-[1.5rem] transition-opacity duration-500 ease-in-out">
+        <p className="text-center text-gray-600 text-sm sm:text-base mb-10 min-h-[1.5rem] transition-opacity duration-500 ease-in-out">
           {taglines[taglineIndex]}
         </p>
 
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Grid */}
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm hover:shadow-lg transition duration-300 overflow-hidden"
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col"
             >
-              <img
-                src={cert.preview}
-                alt={`${cert.title} certificate`}
-                className="w-full h-auto rounded-md object-cover mb-4"
-              />
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
-                {cert.title}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                {cert.issuer} • {cert.date}
-              </p>
+              {/* Certificate Preview */}
               <a
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-3 text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
               >
-                View Credential →
+                <img
+                  src={cert.preview}
+                  alt={`${cert.title} certificate`}
+                  className="w-full h-48 object-cover rounded-t-2xl"
+                />
               </a>
+
+              {/* Content */}
+              <div className="p-5 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    {cert.issuer} • {cert.date}
+                  </p>
+                </div>
+
+                {/* Button */}
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded-2xl hover:bg-gray-800 transition"
+                >
+                  View Credential →
+                </a>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-    </>
   );
 };
 

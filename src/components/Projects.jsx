@@ -1,82 +1,135 @@
 import React from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
     title: "AidBloom Website",
+    date: "Feb 2025 - Mar 2025",
     description:
-      "A Website for AidBloom, a non-profit organization, featuring a donation system and volunteer management.",
+      "Designed and developed AidBloom's official platform for donations and volunteer management. Integrated secure payment gateway and dynamic content management using ASP.Net and MS SQL.",
     image: "/images/aidbloom.png",
     link: "https://aidbloo.netlify.app/",
+    tech: ["HTML","CSS", "Bootstrap", "MS SQL", "ASP.Net"],
+    source: "https://github.com/hasaan-azeem/demo_project",
   },
   {
     title: "Bayaan - Portfolio",
+    date: "Aug 2024 - Sep 2024",
     description:
-      "A portfolio website showcasing my skills and projects, built with HTML , CSS and JS.",
+      "A personal portfolio website showcasing creative works, projects, and achievements. Built with pure HTML, CSS, and JavaScript to emphasize clean design and responsiveness.",
     image: "/images/bayaan.png",
     link: "https://bayaanport.netlify.app/",
+    tech: ["HTML", "CSS", "JavaScript"],
+    source: "https://github.com/hasaan-azeem/Portfolio",
   },
   {
     title: "Fitlyzer - Body Scan App",
+    date: "Mar 2025",
     description:
-      "A mobile application for diet and exercise recommendation, designed with Flutter.",
+      "A mobile app for personalized diet and exercise recommendations. Implemented body-scan detection, real-time data storage, and authentication using Flutter and Firebase.",
     image: "/images/fitlyzer.jpg",
     link: "https://github.com/hasaan-azeem/Fitlyzer-BodyScan",
+    tech: ["Flutter", "Dart", "Firebase"],
+    source: "https://github.com/hasaan-azeem/Fitlyzer-BodyScan",
   },
 ];
 
 const Projects = () => {
   return (
-    <>
-      <div className=" ">
-        <h2 className="font-[apna3] justify-center text-center py-3 text-md sm:text-lg bg-[#dadada]">
-          From Sketch to Screen.
-        </h2>
+    <section id="projects" className="py-5 px-4 sm:px-8 lg:px-12 bg-white">
+      {/* Heading */}
+      <div className="text-center sm:mb-10 mb-6">
+        <h1 className="text-3xl sm:text-5xl font-bold text-center">
+          Projects
+        </h1>
       </div>
-      <section
-        className="px-2 sm:px-10 py-16  dark:bg-gray-900  rounded-3xl"
-        id="projects"
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="-mt-7 text-6xl sm:text-[5vw] font-[apna] font-bold text-black dark:text-white text-center mb-12">
-            Projects
-          </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover p-2 rounded-2xl"
-                />
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    {project.description}
-                  </p>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    className="inline-block mt-4 text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    View Project →
-                  </a>
+      {/* Projects Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col"
+          >
+            {/* Image */}
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-t-2xl border-b-2 border-gray-200"
+              />
+            </a>
+
+            {/* Content */}
+            <div className="p-4 -mt-2 flex flex-col flex-grow">
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                  {project.title}
+                </h3>
+                <p className="text-gray-500 text-xs mb-3">{project.date}</p>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-4">
+                  {project.description}
+                </p>
+
+                {/* Tech stack badges */}
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-3 py-1 bg-gray-800 text-white rounded-full shadow-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
-            ))}
+
+              {/* Buttons */}
+              <div className="flex gap-3 mt-2">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded-2xl hover:bg-gray-800 transition"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  Website
+                </a>
+                <a
+                  href={project.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded-2xl hover:bg-gray-800 transition"
+                >
+                  <svg
+                    viewBox="0 0 438.549 438.549"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                  >
+                    <path d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 01-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z"></path>
+                  </svg>
+                  Source
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+    </section>
   );
 };
 
