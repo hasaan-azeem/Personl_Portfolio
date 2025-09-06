@@ -1,7 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
-import { FaHome, FaGithub, FaLinkedin, FaCode, FaFolderOpen, FaEnvelope } from "react-icons/fa";
+import {
+  FaHome,
+  FaGithub,
+  FaLinkedin,
+  FaCode,
+  FaFolderOpen,
+  FaEnvelope,
+} from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -14,8 +21,16 @@ export default function BottomNav() {
 
   const mainLinks = [
     { href: "#section-main", icon: <FaHome />, label: "Home" },
-    { href: "https://github.com/hasaan-azeem", icon: <FaGithub />, label: "GitHub" },
-    { href: "https://linkedin.com/in/hasaan-azeem", icon: <FaLinkedin />, label: "LinkedIn" },
+    {
+      href: "https://github.com/hasaan-azeem",
+      icon: <FaGithub />,
+      label: "GitHub",
+    },
+    {
+      href: "https://linkedin.com/in/hasaan-azeem",
+      icon: <FaLinkedin />,
+      label: "LinkedIn",
+    },
   ];
 
   const extraLinks = [
@@ -117,34 +132,45 @@ export default function BottomNav() {
     >
       {/* Always visible links */}
       {mainLinks.map((link, i) => (
-        <a
-          key={i}
-          href={link.href}
-          onClick={(e) => handleScroll(e, link.href)}
-          target={link.href.startsWith("http") ? "_blank" : "_self"}
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 text-white hover:bg-gray-700 transition"
-        >
-          {link.icon}
-        </a>
+        <React.Fragment key={i}>
+          <a
+            key={i}
+            href={link.href}
+            onClick={(e) => handleScroll(e, link.href)}
+            target={link.href.startsWith("http") ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 text-white hover:bg-gray-700 transition"
+          >
+            {link.icon}
+          </a>
+          {i < mainLinks.length - 1 && (
+            <span className="w-px h-7 bg-gray-700"></span>
+
+          )}
+        </React.Fragment>
       ))}
 
       {/* Extra links only desktop */}
       <AnimatePresence>
         {hovered &&
           extraLinks.map((link, i) => (
-            <motion.a
-              key={i}
-              href={link.href}
-              onClick={(e) => handleScroll(e, link.href)}
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "2.5rem" }}
-              exit={{ opacity: 0, width: 0 }}
-              transition={{ duration: 0.3, delay: i * 0.2 }}
-              className="hidden md:flex overflow-hidden items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-white hover:bg-gray-600 transition"
-            >
-              {link.icon}
-            </motion.a>
+            <React.Fragment key={i}>
+              <motion.a
+                key={i}
+                href={link.href}
+                onClick={(e) => handleScroll(e, link.href)}
+                initial={{ opacity: 0, width: 0 }}
+                animate={{ opacity: 1, width: "2.5rem" }}
+                exit={{ opacity: 0, width: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.2 }}
+                className="hidden md:flex overflow-hidden items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-white hover:bg-gray-600 transition"
+              >
+                {link.icon}
+              </motion.a>
+              {i < extraLinks.length - 1 && (
+                <span className="w-px h-7 bg-gray-700"></span>
+              )}
+            </React.Fragment>
           ))}
       </AnimatePresence>
     </div>
