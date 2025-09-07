@@ -21,16 +21,8 @@ export default function BottomNav() {
 
   const mainLinks = [
     { href: "#section-main", icon: <FaHome />, label: "Home" },
-    {
-      href: "https://github.com/hasaan-azeem",
-      icon: <FaGithub />,
-      label: "GitHub",
-    },
-    {
-      href: "https://linkedin.com/in/hasaan-azeem",
-      icon: <FaLinkedin />,
-      label: "LinkedIn",
-    },
+    { href: "https://github.com/hasaan-azeem", icon: <FaGithub />, label: "GitHub" },
+    { href: "https://linkedin.com/in/hasaan-azeem", icon: <FaLinkedin />, label: "LinkedIn" },
   ];
 
   const extraLinks = [
@@ -39,7 +31,7 @@ export default function BottomNav() {
     { href: "#contact", icon: <FaEnvelope />, label: "Contact" },
   ];
 
-  // ✅ GSAP smooth scroll handler
+  // Smooth scroll with GSAP
   const handleScroll = (e, href) => {
     if (href.startsWith("#")) {
       e.preventDefault();
@@ -51,7 +43,7 @@ export default function BottomNav() {
     }
   };
 
-  // ✅ Detect screen size
+  // Detect screen size
   useEffect(() => {
     const checkScreen = () => {
       setIsMobile(window.innerWidth < 768);
@@ -61,7 +53,7 @@ export default function BottomNav() {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
-  // ✅ Scroll behavior: show when scrolling down, hide on scroll up or stop
+  // Mobile behavior (show/hide on scroll)
   useEffect(() => {
     if (!isMobile) return;
 
@@ -95,16 +87,9 @@ export default function BottomNav() {
       const currentY = window.scrollY;
 
       clearTimeout(timeoutId);
+      showNav();
 
-      if (currentY > lastScrollY) {
-        // scrolling down → show
-        showNav();
-      } else {
-        // scrolling up → hide
-        showNav();
-      }
-
-      // hide when stop scrolling (after 1s)
+      // Hide after 1s of no scroll
       timeoutId = setTimeout(() => {
         hideNav();
       }, 1000);
@@ -122,57 +107,72 @@ export default function BottomNav() {
   return (
     <div
       ref={navRef}
-      className="
-        fixed bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 
-        bg-white shadow-lg rounded-full px-4 py-2 z-50
-        md:flex
-      "
+      className="fixed bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2 
+                 flex items-center gap-4 bg-white shadow-lg rounded-full px-4 py-2 z-50"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Always visible links */}
+      {/* Main links */}
       {mainLinks.map((link, i) => (
         <React.Fragment key={i}>
           <a
-            key={i}
             href={link.href}
             onClick={(e) => handleScroll(e, link.href)}
             target={link.href.startsWith("http") ? "_blank" : "_self"}
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 text-white hover:bg-gray-700 transition"
+            className="flex items-center justify-center w-10 h-10 rounded-full 
+                       bg-gray-900 text-white hover:bg-gray-700 transition"
           >
             {link.icon}
           </a>
-          {i < mainLinks.length - 1 && (
-            <span className="w-px h-7 bg-gray-700"></span>
-
-          )}
+          {/* Separator only between main links */}
+          {i < mainLinks.length - 1 && <span className="w-px h-7 bg-gray-700"></span>}
         </React.Fragment>
       ))}
 
-      {/* Extra links only desktop */}
-      <AnimatePresence>
-        {hovered &&
-          extraLinks.map((link, i) => (
-            <React.Fragment key={i}>
-              <motion.a
-                key={i}
-                href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
-                initial={{ opacity: 0, width: 0 }}
-                animate={{ opacity: 1, width: "2.5rem" }}
-                exit={{ opacity: 0, width: 0 }}
-                transition={{ duration: 0.3, delay: i * 0.2 }}
-                className="hidden md:flex overflow-hidden items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-white hover:bg-gray-600 transition"
-              >
-                {link.icon}
-              </motion.a>
-              {i < extraLinks.length - 1 && (
-                <span className="w-px h-7 bg-gray-700"></span>
-              )}
-            </React.Fragment>
-          ))}
-      </AnimatePresence>
+     {/* Extra links only on desktop when hovered */}
+<AnimatePresence>
+  {hovered && !isMobile && (
+    <>
+      {/* Separator before extra links */}
+      <motion.span
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: "1.75rem" }} // 1.75rem = h-7
+        exit={{ opacity: 0, height: 0 }}
+        transition={{ duration: 0.3 }}
+        className="hidden md:block w-px bg-gray-700"
+      />
+
+      {extraLinks.map((link, i) => (
+        <React.Fragment key={i}>
+          <motion.a
+            href={link.href}
+            onClick={(e) => handleScroll(e, link.href)}
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "2.5rem" }}
+            exit={{ opacity: 0, width: 0 }}
+            transition={{ duration: 0.3, delay: i * 0.2 }}
+            className="hidden md:flex overflow-hidden items-center justify-center 
+                       w-10 h-10 rounded-full bg-gray-800 text-white hover:bg-gray-600 transition"
+          >
+            {link.icon}
+          </motion.a>
+
+          {i < extraLinks.length - 1 && (
+            <motion.span
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "1.75rem" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, delay: i * 0.2 }}
+              className="hidden md:block w-px bg-gray-700"
+            />
+          )}
+        </React.Fragment>
+      ))}
+    </>
+  )}
+</AnimatePresence>
+
     </div>
   );
 }

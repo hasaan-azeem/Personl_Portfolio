@@ -53,40 +53,37 @@ const Home = () => {
         <div
           id="tiltDiv"
           ref={tiltRef}
-          className="relative z-10 text-left mt-80 xl:mt-30 2xl:mt-60 py-2 sm:py-5 px-3"
+          className="relative z-10 text-left sm:ml-6 mt-80 xl:mt-30 2xl:mt-60 py-2 sm:py-5 px-3"
         >
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-xl xl:text-5xl 2xl:text-8xl uppercase text-black font-[apna] font-extrabold leading-tight">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-xl xl:text-5xl 2xl:text-8xl uppercase text-gray-300 sm:text-black font-extrabold leading-tight">
             I am <span className="text-[#08aaaa]">DARK MODE</span>
             <span className="font-[apna3]">™</span>
           </h1>
 
-          <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-black uppercase font-[apna3] font-extrabold leading-tight tracking-tight sm:tracking-wide mt-2">
+          <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white sm:text-black uppercase font-extrabold leading-none tracking-normal sm:tracking-tight mt-2">
             Website Developer
           </h1>
 
-          <h1 className="text-[#08aaaa] text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-7xl uppercase font-[apna] font-extrabold leading-tight mt-2">
+          <h1 className="text-[#08aaaa] text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-7xl uppercase font-extrabold leading-tight mt-2">
             To Hire
           </h1>
         </div>
 
-        <div className="relative ml-5 mt-10 z-10">
+        <div className="relative flex gap-2 ml-2 sm:ml-5 mt-14 sm:mt-8 z-10">
           <a
             href="/Hasaan_Azeem.pdf"
             download
-            className="px-2 py-2 sm:px-3 sm:py-3 font-semibold rounded-lg shadow-md border-2 border-[#08aaaa] text-white sm:text-[#08aaaa] transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#08aaaa] hover:text-white"
-
-
+            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a]"
           >
             Download My CV
           </a>
           <a
             onClick={() => {
-                const el = document.getElementById("contact");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }}
+              const el = document.getElementById("contact");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
             download
-            className="ml-2 sm:ml-5 px-2 py-2 sm:px-3 sm:py-3 font-semibold rounded-lg shadow-md border-2 border-[#08aaaa] text-white sm:text-[#08aaaa] transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#08aaaa] hover:text-white"
-
+            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a]"
           >
             Contact Me
           </a>
