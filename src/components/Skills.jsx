@@ -6,17 +6,19 @@ export default function SkillsSection() {
   { img: "skills/html.png", name: "HTML" },
   { img: "skills/css.webp", name: "CSS" },
   { img: "skills/JS.png", name: "JavaScript" },
+  { img: "skills/tailwindcss.png", name: "Tailwind" },
+  { img: "skills/mongodb.svg", name: "MongoDB" },
+  { img: "skills/expressjs.svg", name: "Express.js" },
   { img: "skills/reactjs.png", name: "React.js" },
-  { img: "skills/tailwindcss.png", name: "Tailwind CSS" },
-  { img: "skills/boot.jpeg", name: "Bootstrap" },
   { img: "skills/nodejs.webp", name: "Node.js" },
-  { img: "skills/mongodb.png", name: "MongoDB" },
   { img: "skills/mysql.png", name: "MySQL" },
   { img: "skills/flutter.png", name: "Flutter" },
-  { img: "skills/cpp.svg", name: "C++" },
-  { img: "skills/msql.svg", name: "MS SQL Server" },
-  { img: "skills/github.png", name: "Git & GitHub" },
+  { img: "skills/firebase.svg", name: "Firebase" },
+  { img: "skills/boot.jpeg", name: "Bootstrap" },
   { img: "skills/wordpress.png", name: "WordPress" },
+  { img: "skills/cpp.svg", name: "C++" },
+  { img: "skills/msql.svg", name: "MSSQL" },
+  { img: "skills/github.png", name: "GitHub" },
 ];
 
 
@@ -28,7 +30,7 @@ export default function SkillsSection() {
         Skills
       </h2>
       <div className="max-w-5xl mx-auto px-4">
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 text-center">
+        <div className="grid grid-cols-4 sm:grid-cols-4 gap-2 text-center">
           {skills.map((skill, index) => (
             <div
               key={index}
