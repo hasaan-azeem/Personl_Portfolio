@@ -90,13 +90,13 @@ useGSAP(function () {
         <span className="rotateText font-[apna2] text-black text-[60vw] sm:text-[30vw] uppercase tracking-wide sm:tracking-widest leading-none -mb-14 sm:-mb-20">
           Code
         </span>
-        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide  sm:tracking-widest -mb-14 sm:-mb-20">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide  sm:tracking-widest -mb-12 sm:-mb-20">
           Design
         </span>
-        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest -mb-14 sm:-mb-20">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest -mb-12 sm:-mb-20">
           Deploy
         </span>
-        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest -mb-14 sm:-mb-20">
+        <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest -mb-12 sm:-mb-20">
           Optimize
         </span>
         <span className="rotateText font-[apna2] text-black text-[50vw] sm:text-[30vw] uppercase leading-none tracking-wide sm:tracking-widest">
