@@ -31,7 +31,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=hasaanazeem07@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=hasaanazeem07@outlook.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#08aaaa] transition"

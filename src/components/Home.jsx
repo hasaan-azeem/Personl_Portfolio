@@ -73,7 +73,7 @@ const Home = () => {
           <a
             href="/HasaanAzeem_Full Stack.pdf"
             download
-            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a]"
+            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer"
           >
             Download My CV
           </a>
@@ -83,7 +83,7 @@ const Home = () => {
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
             download
-            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a]"
+            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer"
           >
             Contact Me
           </a>
