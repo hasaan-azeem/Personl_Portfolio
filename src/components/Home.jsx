@@ -71,7 +71,7 @@ const Home = () => {
 
         <div className="relative flex gap-2 ml-2 sm:ml-5 mt-14 sm:mt-8 z-10">
           <a
-            href="/HasaanAzeem_Full Stack.pdf"
+            href="/Hasaan Azeem_Full Stack.pdf"
             download
             className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer"
           >
