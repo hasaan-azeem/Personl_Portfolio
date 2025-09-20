@@ -45,7 +45,7 @@ const Home = () => {
     >
       <div
         id="main"
-        className="relative w-full h-full bg-[url('/src/assets/profile.png')] sm:bg-[url('/src/assets/desktop.png')] bg-cover bg-center bg-no-repeat p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg "
+        className="relative w-full h-full bg-[url('/src/assets/profile3.jpg')] sm:bg-[url('/src/assets/profile3.jpg')] bg-cover bg-center sm:bg-[position:50%_20%] bg-no-repeat p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg"
       >
         <div className="absolute inset-0 sm:hidden bg-gradient-to-tr from-black/90 to-transparent z-0 rounded-2xl"></div>
         <div className="absolute inset-0 sm:hidden bg-gradient-to-bl from-black/20 to-transparent z-0 rounded-2xl"></div>
@@ -53,27 +53,26 @@ const Home = () => {
         <div
           id="tiltDiv"
           ref={tiltRef}
-          className="relative z-10 text-left sm:ml-6 mt-80 xl:mt-30 2xl:mt-60 py-2 sm:py-5 px-3"
+          className="relative z-10 text-left sm:ml-6 mt-80 sm:mt-40 md:mt-50 lg:mt-40 xl:mt-40 2xl:mt-60 py-2 sm:py-5 px-3"
         >
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-xl xl:text-5xl 2xl:text-8xl uppercase text-gray-300 sm:text-black font-extrabold leading-tight">
-            I am <span className="text-[#08aaaa]">DARK MODE</span>
-            <span className="font-[apna3]">™</span>
+          <h1 className="text-[6vh] -mb-4 sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl uppercase font-[apna2] text-gray-300 leading-tight font-extrabold tracking-wider">
+            I am <span className="text-[#08aaaa]">Hasaan Azeem</span>
           </h1>
 
-          <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white sm:text-black uppercase font-extrabold leading-none tracking-normal sm:tracking-tight mt-2">
-            Website Developer
+          <h1 className="text-[5vh] -mb-4 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white uppercase font-extrabold leading-tight  mt-3 font-[apna3]">
+            Full Stack Developer
           </h1>
 
-          <h1 className="text-[#08aaaa] text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-7xl uppercase font-extrabold leading-tight mt-2">
+          <h1 className="text-[3vh] font-[apna3] sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-[#08aaaa] uppercase font-extrabold leading-snug mt-3">
             To Hire
           </h1>
         </div>
 
-        <div className="relative flex gap-2 ml-2 sm:ml-5 mt-14 sm:mt-8 z-10">
+        <div className="relative flex gap-3 sm:gap-4 ml-2 sm:ml-5 mt-2 sm:mt-4 z-10">
           <a
             href="/Hasaan Azeem_Full Stack.pdf"
             download
-            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer"
+            className="px-4 py-2 sm:px-5 sm:py-3 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base md:text-lg"
           >
             Download My CV
           </a>
@@ -82,17 +81,16 @@ const Home = () => {
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            download
-            className="px-3 py-2 sm:px-4 sm:py-3 font-semibold rounded-3xl shadow-md bg-[#101828] border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer"
+            className="px-4 py-2 sm:px-5 sm:py-3 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base md:text-lg"
           >
             Contact Me
           </a>
         </div>
 
         {/* Footer Text */}
-        <div className="absolute bottom-4 sm:bottom-30 md:bottom-5 left-8 sm:left-6 md:left-8 lg:left-14 z-10">
-          <h2 className="text-white sm:text-black font-[apna3] font-semibold tracking-wider text-md sm:text-lg md:text-xl uppercase">
-            Full stack developer
+        <div className="absolute bottom-4 md:bottom-6 lg:bottom-8 left-6 sm:left-6 md:left-8 lg:left-12 z-10">
+          <h2 className="text-white font-[apna3] font-semibold tracking-wider text-sm sm:text-base md:text-lg lg:text-xl uppercase">
+            Full Stack Developer
           </h2>
         </div>
       </div>
