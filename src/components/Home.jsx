@@ -45,7 +45,7 @@ const Home = () => {
     >
       <div
         id="main"
-        className="relative w-full h-full bg-[url('/src/assets/profile3.jpg')] sm:bg-[url('/src/assets/profile3.jpg')] bg-cover bg-center sm:bg-[position:50%_20%] bg-no-repeat p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg"
+        className="relative w-full h-full bg-[url('/src/assets/profile3.png')] sm:bg-[url('/src/assets/profile3.png')] bg-cover bg-center sm:bg-[position:50%_20%] bg-no-repeat p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg"
       >
         <div className="absolute inset-0 sm:hidden bg-gradient-to-tr from-black/90 to-transparent z-0 rounded-2xl"></div>
         <div className="absolute inset-0 sm:hidden bg-gradient-to-bl from-black/20 to-transparent z-0 rounded-2xl"></div>
