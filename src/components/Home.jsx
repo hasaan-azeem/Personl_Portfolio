@@ -53,13 +53,13 @@ const Home = () => {
         <div
           id="tiltDiv"
           ref={tiltRef}
-          className="relative z-10 text-left sm:ml-6 mt-80 sm:mt-40 md:mt-50 lg:mt-40 xl:mt-40 2xl:mt-60 py-2 sm:py-5 px-3"
+          className="relative z-10 text-left mt-80 sm:mt-40 md:mt-50 lg:mt-40 xl:mt-36 2xl:mt-60 py-2 sm:py-5 px-3"
         >
           <h1 className="text-[6vh] -mb-4 sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl uppercase font-[apna2] text-gray-300 leading-tight font-extrabold tracking-wider">
             I am <span className="text-[#08aaaa]">Hasaan Azeem</span>
           </h1>
 
-          <h1 className="text-[5vh] -mb-4 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white uppercase font-extrabold leading-tight  mt-3 font-[apna3]">
+          <h1 className="text-[5vh] -mb-3 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white uppercase font-extrabold leading-tight  mt-3 font-[apna3]">
             Full Stack Developer
           </h1>
 
@@ -68,11 +68,11 @@ const Home = () => {
           </h1>
         </div>
 
-        <div className="relative flex gap-3 sm:gap-4 ml-2 sm:ml-5 mt-2 sm:mt-4 z-10">
+        <div className="relative flex gap-3 sm:gap-4 ml-2 sm:ml-5 mt-2 sm:mt-2 z-10">
           <a
             href="/Hasaan Azeem_Full Stack.pdf"
             download
-            className="px-4 py-2 sm:px-5 sm:py-3 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base md:text-lg"
+            className="px-4 py-2 sm:px-3 sm:py-2 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base"
           >
             Download My CV
           </a>
@@ -81,7 +81,7 @@ const Home = () => {
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-4 py-2 sm:px-5 sm:py-3 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base md:text-lg"
+            className="px-4 py-2 sm:px-3 sm:py-2 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base"
           >
             Contact Me
           </a>
