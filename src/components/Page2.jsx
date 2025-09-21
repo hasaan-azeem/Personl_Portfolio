@@ -61,7 +61,7 @@ useGSAP(function () {
 
   return (
     <div  className="flex flex-col justify-center">
-      <div className="w-full overflow-hidden bg-black">
+      <div className="w-full overflow-hidden py-2 bg-black">
         <div className="flex w-max whitespace-nowrap" ref={marqueeRef}>
           {/* Two duplicated text blocks for seamless loop */}
           <div className="flex" ref={textRef}>
