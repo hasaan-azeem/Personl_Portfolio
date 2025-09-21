@@ -66,18 +66,18 @@ useGSAP(function () {
           {/* Two duplicated text blocks for seamless loop */}
           <div className="flex" ref={textRef}>
             <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mx-6">
-              I AM A WEBSITE DEVELOPER AND FLUTTER APPLICATION DEVELOPER.
+              From Concept to Code – I Create Digital Products That Work.
             </span>
             <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mx-6">
-              I AM A WEBSITE DEVELOPER AND FLUTTER APPLICATION DEVELOPER.
+             Your Next Full-Stack Web and Flutter Developer – Ready to Build What’s Next.
             </span>
           </div>
           <div className="flex">
             <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mx-6">
-              I AM A WEBSITE DEVELOPER AND FLUTTER APPLICATION DEVELOPER.
+             I Build Websites That Convert and Mobile Apps That People Love.
             </span>
             <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mx-6">
-              I AM A WEBSITE DEVELOPER AND FLUTTER APPLICATION DEVELOPER.
+             From Concept to Code – I Create Digital Products That Work.
             </span>
           </div>
         </div>
