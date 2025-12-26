@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Certification from "./components/Certification";
 
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
@@ -48,7 +49,7 @@ const App = () => {
   }, []);
 
   return (
-    <div data-scroll-container className="w-full min-h-screen">
+    <div data-scroll-container className="w-full min-h-screen cursor-none">
       <NavBar sectionRefs={sectionRefs} lenis={lenisRef} />
       <Home ref={sectionRefs.home} />
       <Page2 sectionRefs={sectionRefs} />
