@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef, useState } from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 const Home = () => {
   const tiltRef = useRef(null);
@@ -90,7 +91,9 @@ const Home = () => {
         {/* Footer Text */}
         <div className="absolute bottom-4 md:bottom-6 lg:bottom-8 left-6 sm:left-6 md:left-8 lg:left-12 z-10">
           <h2 className="text-white font-[apna3] font-semibold tracking-wider text-sm sm:text-base md:text-lg lg:text-xl uppercase">
-            Full Stack Developer
+            <Highlighter action="underline" color="#FF9800">
+              Full Stack Developer
+            </Highlighter>
           </h2>
         </div>
       </div>

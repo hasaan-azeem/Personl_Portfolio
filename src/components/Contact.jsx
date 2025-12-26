@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,8 +41,12 @@ const Contact = () => {
     <>
     <section
       id="contact"
-      className="w-full px-2 sm:px-6 lg:px-8 py-12 bg-gray-50  rounded-3xl"
+      className="w-full px-2 sm:px-6 lg:px-8 py-12 relative  rounded-3xl"
     >
+      {/* Light rays background */}
+            <div className="absolute inset-0 w-full -z-10 overflow-hidden">
+              <AnimatedGridPattern  />
+            </div>
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-5xl font-bold text-center">
          Get in Touch
