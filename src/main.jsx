@@ -9,7 +9,7 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SmoothCursor />
+    <SmoothCursor/>
     <App />
   </StrictMode>,
 )

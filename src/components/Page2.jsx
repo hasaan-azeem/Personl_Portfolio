@@ -49,7 +49,7 @@ const Marquee = () => {
   return (
     <div className="flex flex-col justify-center">
       {/* Removed marquee block */}
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <div className="relative w-full flex-col items-center justify-center overflow-hidden hidden md:flex">
         <ScrollVelocityContainer className="text-4xl font-bold tracking-[-0.02em] md:text-5xl md:leading-[5rem]">
           <ScrollVelocityRow baseVelocity={5} direction={1}>
             I Build Scalable Web Apps & Mobile Experiences &nbsp;
