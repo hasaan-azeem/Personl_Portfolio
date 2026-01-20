@@ -3,6 +3,7 @@ import gsap from "gsap";
 import React, { useRef, useState } from "react";
 import { Highlighter } from "@/components/ui/highlighter";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import SocialIcons from "./SocialIcons";
 
 const Home = () => {
   const tiltRef = useRef(null);
@@ -40,7 +41,7 @@ const Home = () => {
 
   return (
     <div
-      id="section-main"
+      id="Home"
       onMouseMove={(e) => {
         // Only trigger if device has a fine pointer (mouse)
         if (window.matchMedia("(pointer: fine)").matches) {
@@ -55,6 +56,10 @@ const Home = () => {
       >
         <div className="absolute inset-0 sm:hidden bg-gradient-to-tr from-black/90 to-transparent z-0 rounded-2xl"></div>
         <div className="absolute inset-0 sm:hidden bg-gradient-to-bl from-black/20 to-transparent z-0 rounded-2xl"></div>
+
+        <div className="right-4 sm:right-6 md:right-8 top-4 sm:top-6 md:top-2 absolute z-10">
+          <SocialIcons />
+        </div>
 
         <div
           id="tiltDiv"

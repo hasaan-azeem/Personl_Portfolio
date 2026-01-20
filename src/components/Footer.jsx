@@ -6,14 +6,12 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="text-gray-600  py-6 px-4 border-t border-gray-200 "
+      className="text-gray-600  py-3 px-4 border-t border-gray-200 -mt-5"
     >
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p className="text-sm text-center sm:text-left">
-          © {new Date().getFullYear()} Hasaan Azeem. All rights reserved.
-        </p>
+      <div className="max-w-5xl mx-auto flex flex-col justify-between items-center gap-4">
+        
 
-        <div className="flex gap-4 text-xl sm:text-2xl">
+        <div className="flex gap-4 sm:text-2xl">
           <a
             href="https://github.com/hasaan-azeem"
             target="_blank"
@@ -39,6 +37,9 @@ const Footer = () => {
             <FaEnvelope />
           </a>
         </div>
+        <p className="text-sm text-center sm:text-left">
+          © {new Date().getFullYear()} Hasaan Azeem. All rights reserved.
+        </p>
       </div>
     </footer>
   );

@@ -1,61 +1,89 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+// import React, { useRef, useState } from "react";
+// import emailjs from "@emailjs/browser";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import Footer from "./Footer";
+import { Highlighter } from "@/components/ui/highlighter";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  const formRef = useRef();
-  const [sent, setSent] = useState(false);
-  const [loading, setLoading] = useState(false);
+  //   const formRef = useRef();
+  //   const [sent, setSent] = useState(false);
+  //   const [loading, setLoading] = useState(false);
 
-  
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .sendForm(
-        "service_89lipqf", // Replace with your actual service ID
-        "latest_template", // Replace with your actual template ID
-        formRef.current,
-        "7pX1x5CRfgjG8C0sP" // Replace with your public key
-      )
-      .then(() => {
-        setSent(true);
-        setLoading(false);
-        formRef.current.reset();
-        setTimeout(() => setSent(false), 4000);
-      })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert("Failed to send message. Please try again.");
-        setLoading(false);
-      });
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_89lipqf", // Replace with your actual service ID
+  //       "latest_template", // Replace with your actual template ID
+  //       formRef.current,
+  //       "7pX1x5CRfgjG8C0sP" // Replace with your public key
+  //     )
+  //     .then(() => {
+  //       setSent(true);
+  //       setLoading(false);
+  //       formRef.current.reset();
+  //       setTimeout(() => setSent(false), 4000);
+  //     })
+  //     .catch((error) => {
+  //       console.error("EmailJS Error:", error);
+  //       alert("Failed to send message. Please try again.");
+  //       setLoading(false);
+  //     });
+  // };
 
   return (
     <>
-    <section
-      id="contact"
-      className="w-full px-2 sm:px-6 lg:px-8 py-12 relative  rounded-3xl"
-    >
-      {/* Light rays background */}
-            <div className="absolute inset-0 w-full -z-10 overflow-hidden">
-              <AnimatedGridPattern  />
-            </div>
-      <div className="max-w-3xl mx-auto text-center mb-12">
-        <h2 className="text-3xl sm:text-5xl font-bold text-center">
-         Get in Touch
-        </h2>
-        <p className="text-gray-600 text-sm sm:text-xl mt-2">
-          Drop a message and I’ll get back to you as soon as possible.
-        </p>
-      </div>
+      <section
+        id="contact"
+        className="w-full px-2 sm:px-6 lg:px-8 py-12 relative  rounded-3xl"
+      >
+        {/* Light rays background */}
+        <div className="absolute inset-0 w-full -z-10 overflow-hidden">
+          <AnimatedGridPattern />
+        </div>
+        <div className="max-w-3xl mx-auto text-center mb-12 px-4">
+          <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-md">
+            Contact
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold text-center mt-3 text-gray-900">
+            Get in Touch
+          </h2>
+          <p className="font-semibold text-sm sm:text-lg my-4  leading-relaxed">
+            Want to get in touch? Feel free to message me on{" "}
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0a84ff] hover:underline font-bold"
+            >
+              <Highlighter action="underline" color="#FF9800">
+                LinkedIn{" "}
+              </Highlighter>
+            </a>
+            , send me an{" "}
+            <a
+              href="mailto:hasaanazeem07@outlook.com"
+              className="text-[#0a84ff] hover:underline font-bold"
+            >
+              <Highlighter action="underline" color="#FF9800">
+                email{" "}
+              </Highlighter>
+            </a>
+            , or reach out via any of my social profiles. I’ll get back to you
+            as soon as I can.{" "}
+          </p>
+          <span className="font-bold mt-10">            
+              Please note: I don’t respond to unsolicited offers.
+          </span>
+        </div>
 
+        {/*
       <form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -99,7 +127,6 @@ const Contact = () => {
           ></textarea>
         </div>
 
-        {/* Hidden timestamp field for template */}
         <input type="hidden" name="time" value={new Date().toLocaleString()} />
 
         <button
@@ -116,7 +143,9 @@ const Contact = () => {
           </p>
         )}
       </form>
-    </section>
+      */}
+        <Footer />
+      </section>
     </>
   );
 };

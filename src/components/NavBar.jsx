@@ -195,7 +195,7 @@ gsap.registerPlugin(ScrollToPlugin);
 export default function NavBar() {
   const mainLinks = [
     {
-      href: "#section-main",
+      href: "#Home",
       icon: (
         <FaHome className="h-full w-full  text-white-500 dark:text-neutral-300" />
       ),
