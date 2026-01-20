@@ -4,7 +4,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const SocialIcons = () => {
   const icons = [
-    { icon: <FaInstagram />, href: "https://instagram.com/autophile_03" },
+    { icon: <FaInstagram />, href: "https://www.instagram.com/autophilo_03" },
     { icon: <FaFacebook />, href: "https://facebook.com/hasaanazeem0" },
     { icon: <FaSquareXTwitter />, href: "https://twitter.com/hasaan_butt07" },
   ];
