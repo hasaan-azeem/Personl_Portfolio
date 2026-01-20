@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-5xl mx-auto flex flex-col justify-between items-center gap-4">
         
 
-        <div className="flex gap-4 sm:text-2xl">
+        <div className="flex gap-4 text-2xl sm:text-3xl">
           <a
             href="https://github.com/hasaan-azeem"
             target="_blank"
