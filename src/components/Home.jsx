@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef, useState } from "react";
 import { Highlighter } from "@/components/ui/highlighter";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 const Home = () => {
   const tiltRef = useRef(null);
@@ -14,33 +15,37 @@ const Home = () => {
       (e.clientX -
         tiltRef.current.getBoundingClientRect().x -
         tiltRef.current.getBoundingClientRect().width / 2) /
-        50
+        50,
     );
     setYVal(
       -(
         e.clientY -
         tiltRef.current.getBoundingClientRect().y -
         tiltRef.current.getBoundingClientRect().height / 2
-      ) / 10
+      ) / 10,
     );
   };
 
   useGSAP(
     function () {
+      if (!window.matchMedia("(pointer: fine)").matches) return;
       gsap.to(tiltRef.current, {
         transform: `rotateX(${yVal}deg) rotateY(${xVal}deg)`,
         duration: 3,
         ease: "elastic.out(1, 0.3)",
       });
     },
-    [xVal, yVal]
+    [xVal, yVal],
   );
 
   return (
     <div
       id="section-main"
       onMouseMove={(e) => {
-        mouseMoving(e);
+        // Only trigger if device has a fine pointer (mouse)
+        if (window.matchMedia("(pointer: fine)").matches) {
+          mouseMoving(e);
+        }
       }}
       className="relative h-screen w-full bg-white p-2 xs:p-3 sm:p-4 md:p-5"
     >
@@ -54,7 +59,7 @@ const Home = () => {
         <div
           id="tiltDiv"
           ref={tiltRef}
-          className="relative z-10 text-left mt-80 sm:mt-40 md:mt-50 lg:mt-40 xl:mt-36 2xl:mt-60 py-2 sm:py-5 px-3"
+          className="relative z-10 sm:ml-5 text-left mt-80 sm:mt-40 md:mt-50 lg:mt-40 xl:mt-36 2xl:mt-60 py-2 sm:py-5 px-3"
         >
           <h1 className="text-[6vh] -mb-4 sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl uppercase font-[apna2] text-gray-300 leading-tight font-extrabold tracking-wider">
             I am <span className="text-[#08aaaa]">Hasaan Azeem</span>
@@ -69,15 +74,23 @@ const Home = () => {
           </h1>
         </div>
 
-        <div className="relative flex gap-3 sm:gap-4 ml-2 sm:ml-5 mt-2 sm:mt-2 z-10">
-          <a
+        <div className="relative flex  gap-3 sm:gap-4 ml-2 sm:ml-5 mt-6 sm:mt-2 z-10">
+          {/* <a
             href="/Hasaan Azeem_Full Stack.pdf"
             download
             className="px-4 py-2 sm:px-3 sm:py-2 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base"
           >
             Download My CV
-          </a>
+          </a> */}
           <a
+            href="/Hasaan Azeem_Full Stack.pdf"
+            download
+            className="inline-block text-sm sm:text-base"
+          >
+            <InteractiveHoverButton>Download CV</InteractiveHoverButton>
+          </a>
+
+          {/* <a
             onClick={() => {
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -85,6 +98,15 @@ const Home = () => {
             className="px-4 py-2 sm:px-3 sm:py-2 font-semibold rounded-3xl shadow-md border border-gray-400 text-white transition duration-300 ease-in-out transform hover:bg-[#0a0f1a] cursor-pointer text-sm sm:text-base"
           >
             Contact Me
+          </a> */}
+          <a
+            onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="text-sm sm:text-base"
+          >
+            <InteractiveHoverButton>Contact Me</InteractiveHoverButton>
           </a>
         </div>
 
