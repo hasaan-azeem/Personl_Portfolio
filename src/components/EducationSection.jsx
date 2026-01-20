@@ -2,6 +2,7 @@ import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 const education = [
   {
@@ -31,13 +32,18 @@ export default function EducationSection() {
 
   return (
     <section
-      className="flex flex-col justify-center mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-3 pb-10"
+      className=""
       id="education"
     >
-      <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center">
+      <Highlighter action="underline" color="#FF9800">
+      <h2 className="text-3xl sm:text-5xl font-bold mb-2 text-center">
         Education
       </h2>
-      <div className="space-y-6 sm:space-y-8">
+    </Highlighter>
+    <div className="flex flex-col justify-center mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-3 pb-10">
+
+   
+      <div className="space-y-6 sm:space-y-8 mt-4">
         {education.map((item, index) => (
           <div
             key={index}
@@ -93,6 +99,7 @@ export default function EducationSection() {
           </div>
         ))}
       </div>
+       </div>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 const projects = [
   {
@@ -29,8 +30,10 @@ const Projects = () => {
    <section id="projects" className="py-8 px-4 sm:px-6 lg:px-12 bg-white">
   {/* Heading */}
   <div className="text-center mb-8">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-2">Check out my latest work</h2>
-    <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto">
+    <Highlighter action="underline" color="#FF9800">
+    <h2 className="text-2xl sm:text-3xl font-bold mb-1">Check out my latest work</h2>
+    </Highlighter>
+    <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto mt-4">
       I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
     </p>
   </div>

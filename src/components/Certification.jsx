@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 const taglines = [
   "Proof of progress, one certificate at a time.",
@@ -57,8 +58,10 @@ const Certification = () => {
    <section id="certifications" className="py-8 px-4 sm:px-6 lg:px-12 bg-gray-50">
   {/* Heading */}
   <div className="text-center mb-8">
+    <Highlighter action="underline" color="#FF9800">
     <h2 className="text-2xl sm:text-3xl font-bold mb-2">Certifications</h2>
-    <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto">
+    </Highlighter>
+    <p className="text-gray-500 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
       {taglines[taglineIndex]}
     </p>
   </div>

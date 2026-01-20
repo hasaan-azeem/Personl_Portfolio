@@ -8,6 +8,7 @@ import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Contact from "./components/Contact";
+import Services from "./components/Services";
 import Certification from "./components/Certification";
 
 
@@ -53,6 +54,7 @@ const App = () => {
       <Home ref={sectionRefs.home} />
       <Page2 sectionRefs={sectionRefs} />
       <Skills ref={sectionRefs.skills} />
+      <Services />
       <Projects ref={sectionRefs.Projects} />
       <Certification ref={sectionRefs.Certification} />
       <Contact ref={sectionRefs.Contact} />

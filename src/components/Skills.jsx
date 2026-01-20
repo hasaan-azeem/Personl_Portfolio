@@ -1,5 +1,6 @@
 import React from "react";
 import EducationSection from "./EducationSection";
+import { Highlighter } from "@/components/ui/highlighter";
 
 export default function SkillsSection() {
   const skills = [
@@ -22,13 +23,14 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-8 bg-gray-50">
+    <section id="skills" className="text-center py-8 bg-gray-50">
       <EducationSection />
-
-      <h2 className="text-3xl sm:text-5xl font-bold text-center mb-6">
-        Skills
-      </h2>
-      <div className="max-w-5xl mx-auto px-4">
+      <Highlighter action="underline" color="#FF9800">
+        <h2 className="text-3xl sm:text-5xl font-bold text-center mb-2">
+          Skills
+        </h2>
+      </Highlighter>
+      <div className="max-w-5xl mx-auto px-4 mt-7">
         <div className="grid grid-cols-4 sm:grid-cols-4 gap-2 text-center">
           {skills.map((skill, index) => (
             <div

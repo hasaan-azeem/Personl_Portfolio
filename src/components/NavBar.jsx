@@ -187,6 +187,7 @@ import {
   FaFolderOpen,
   FaEnvelope,
 } from "react-icons/fa";
+import { TfiBriefcase } from "react-icons/tfi";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -224,6 +225,13 @@ export default function NavBar() {
         <FaCode className="h-full w-full  text-white-500 dark:text-neutral-300" />
       ),
       title: "Skills",
+    },
+    {
+      href: "#services",
+      icon: (
+        <TfiBriefcase className="h-full w-full  text-white-500 dark:text-neutral-300" />
+      ),
+      title: "Services",
     },
     {
       href: "#projects",
