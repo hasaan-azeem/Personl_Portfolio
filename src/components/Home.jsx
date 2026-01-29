@@ -88,7 +88,7 @@ const Home = () => {
             Download My CV
           </a> */}
           <a
-            href="/Hasaan Azeem_Full Stack.pdf"
+            href="/Hasaan_Azeem_Full_Stack.pdf"
             download
             className="inline-block text-sm sm:text-base"
           >
