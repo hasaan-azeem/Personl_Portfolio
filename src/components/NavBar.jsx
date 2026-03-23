@@ -198,7 +198,7 @@ export default function NavBar() {
     {
       href: "#Home",
       icon: (
-        <FaHome className="h-full w-full  text-white-500 dark:text-neutral-300" />
+        <FaHome className="h-full w-full  text-white-500 dark:text-neutral-300 cursor-pointer" />
       ),
       title: "Home",
     },
@@ -264,17 +264,17 @@ export default function NavBar() {
   };
 
   const dockItems = [...mainLinks, ...extraLinks].map((item) => ({
-    icon: item.icon,
-    title: item.title,
+    icon: <div className="cursor-pointer">{item.icon}</div>,
+    title: <span className="font-bold">{item.title}</span>,
     href: item.href,
     onClick: (e) => handleClick(e, item.href),
   }));
 
   return (
     <FloatingDock
-      className="bg-gray-700"
+      className="bg-gray-700 "
       items={dockItems}
-      desktopClassName="fixed bottom-6 left-1/2 -translate-x-1/2 z-50  "
+      desktopClassName="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 cursor-pointer"
       mobileClassName="fixed bottom-4 right-4 z-50"
     />
   );
