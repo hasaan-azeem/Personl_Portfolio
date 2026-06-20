@@ -48,7 +48,7 @@ const Marquee = () => {
 
   return (
     <div className="flex flex-col justify-center">
-      {/* Removed marquee block */}
+      {/* Removed marquee block
       <div className="relative w-full flex-col items-center justify-center overflow-hidden hidden md:flex">
         <ScrollVelocityContainer className="text-4xl font-bold tracking-[-0.02em] md:text-5xl md:leading-[5rem]">
           <ScrollVelocityRow baseVelocity={5} direction={1}>
@@ -60,7 +60,7 @@ const Marquee = () => {
         </ScrollVelocityContainer>
         <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
-      </div>
+      </div> */}
 
       <div
         id="section2"

@@ -24,6 +24,15 @@ body::-webkit-scrollbar {
   background: transparent; /* optional */
 }
 
+/* Hides scrollbar on horizontal scroll containers, e.g. the certifications deck */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* * {
   cursor: none !important;
 } */
