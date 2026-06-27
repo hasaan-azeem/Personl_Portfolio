@@ -27,7 +27,7 @@ const Contact = () => {
           <p className="font-semibold text-sm sm:text-lg my-4  leading-relaxed">
             Want to get in touch? Feel free to message me on{" "}
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/hasaan-azeem"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#0a84ff] hover:underline font-bold"
